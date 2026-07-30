@@ -1,62 +1,76 @@
 # 이강원 (Kangwon Lee)
 
-> **"과학적 설계와 규제적 사고의 통합으로 환자에게 도달하는 의약품을 개발합니다."**
-실험실의 결과가 논문에 머무르지 않고, 실제 환자의 삶을 바꾸는 치료제로 이어지는 과정을 목표로 연구합니다.제약생명공학(Wet Lab) 기반의 실험 경험과 규제약학(Regulatory Science) 석사 과정을 통해 습득한 구조 기반 약물 설계(SBDD) 및 데이터 분석 역량을 융합하여, AI 기반 신약 개발의 효율을 높이는 연구자로 성장하고 있습니다.
+> **"AI의 예측을 맹신하지 않고 끝까지 검증하여, 신뢰할 수 있는 구조 기반 설계로 연결합니다."**
+
+구조 정보가 불분명한 타깃 단백질의 3차원 구조를 예측하고, 시뮬레이션으로 결합 안정성을 검증하는 연구를 수행해 왔습니다. 계산생물학(AlphaFold, 분자동역학)과 규제과학(Regulatory Science) 석사 과정을 함께 거치며, AI 예측 결과를 실험적·통계적으로 재검증하는 습관과 데이터를 근거로 소통하는 역량을 함께 길렀습니다.
 
 ---
 
-# 핵심 역량 요약
-| 분야 | 강점 및 기여 가능 분야 | 입증 경험 |
+## 핵심 역량 요약
+
+| 분야 | 강점 | 입증 경험 |
 | :--- | :--- | :--- |
-| **AI Design & Modeling** | AlphaFold2/3 등 AI 모델 기반 설계 및 모델 검증 | GROMACS 기반 구조 안정성 분석, AutoDock·PyRx 도킹 검증 |
-| **Data & Structure Analysis** | 단백질 시퀀스/구조 데이터 핸들링 및 시각화 능력 | PyMOL, LigPlus를 통한 인터랙션 분석 및 구조 품질 검증 |
-| **Verification & Problem Solving** | 계산화학적 문제 발생 시 근본 원인 탐구 및 체계적 해결 | KDM5C 프로젝트에서 시뮬레이션 불안정성 해결을 위한 개선 |
-| **Cross-Functional Collaboration** | 규제과학 기획 연구 및 Wet Lab 경험 기반의 협업 및 소통 능력 | Featured Project 참조 |
+| **AI 구조 예측 & 검증** | AlphaFold 기반 구조 예측, 예측 오차를 시뮬레이션으로 재보정 | KDM5C 저해제 발굴 프로젝트 |
+| **분자 시뮬레이션 & 도킹** | GROMACS 분자동역학(200ns), MM/PBSA 결합 자유에너지, PyRx·AutoDock Vina 도킹, PrankWeb 포켓 예측 | KDM5C 저해제 발굴 프로젝트 |
+| **딥러닝 & 데이터 분석** | PyTorch 기반 CNN 모델 설계, Python(Pandas/Numpy) 데이터 핸들링 | 흉부 X-ray 폐렴 분류 모델 |
+| **단백질 디자인 도구 (학습 중)** | RFdiffusion, ProteinMPNN 워크플로우 및 개념 이해 | 튜토리얼 기반 학습 |
+| **이종 분야 협업 & 문서화** | 규제-기술 간 기준 조율, 정책 문서 작성 | 식약처 다기관 공동 연구 |
 
 ---
 
-# Technical Workflow & Tool Mastery
+## Featured Projects
 
-## 1. Structure Prediction & Modeling
-* **구조 예측:** AlphaFold2/3, PyRx, AutoDock
-* **Docking:** AutoDock Vina, PyRx
-* **기반 기술:** RFdiffusion, ProteinMPNN 등 최신 Diffussion Model 개념 이해
-* **시각화:** PyMOL 등
+### 1. 구조 기반 신약 개발 — KDM5C 저해제 후보물질 발굴 *(2024.07–2025.06)*
+알츠하이머 치료 후성유전학적 타깃인 KDM5C의 저해제 후보물질을 발굴한 기초(BASE) 연구입니다.
 
-## 2. Design Optimization & Verification
-* **분자 동역학 (MD):** GROMACS (200ns 시뮬레이션), MM/PBSA (결합 자유 에너지 계산)
-* **SBDD/Engineering:** 표적 단백질의 결합 포켓 예측 (PrankWeb), 리간드 스크리닝
-* **데이터 핸들링:** Python (Pandas/Numpy)
+- AlphaFold로 KDM5C의 3차원 구조를 예측하고 PrankWeb으로 결합 포켓을 특정
+- ChEMBL DB와 Lipinski's Rule of Five 기준으로 스크리닝 라이브러리 구축
+- PyRx·AutoDock Vina로 대규모 리간드 도킹, GROMACS(200ns) MD 시뮬레이션으로 결합 안정성 검증
+- MM/PBSA로 결합 자유에너지를 정량화해 DROPERIDOL, ESTRONE 등 고결합 친화도 후보물질 도출
+- 예측 구조 일부 잔기가 시뮬레이션 환경에서 불안정하게 거동하는 문제를 발견해, 연산 조건을 단계적으로 재보정하며 재현성 확보
 
----
+> 코드는 학내 계산 클러스터(Linux) 환경에서 실행되어 이 레포에는 포함되어 있지 않습니다. 핵심 스크립트 정리 후 별도 폴더로 추가할 예정입니다.
 
-# Featured Project: 
-## 1. 구조 기반 신약 개발(Structure-Based Drug Design, SBDD)
-* 주요 내용: AlphaFold 기반 KDM5C 단백질 모델링, PyRx·AutoDock을 활용한 대규모 리간드 스크리닝, MD 시뮬레이션(200 ns) 기반 결합 안정성·상호작용 패턴 분석, MM/PBSA 기반 자유에너지 검증 및 구조 기반 설계 개선 전략 도출.
-
-* 성과: 시뮬레이션 불안정성 문제를 계산화학적 접근으로 해결하고 세팅을 고도화하여 신뢰도 확보. 구조 기반 신약 설계(SBDD) 워크플로우 전 과정 수행 경험.
-
-## 2. 의약품동등성시험 대조약 선정관리 체계 개선방안 연구
-* 주요 내용: 국내 의약품동등성시험의 대조약 선정 기준 분석 및 해외 규제기관(FDA, EMA, PMDA 등) 비교를 통한 개선 방향 제안, 데이터베이스 구축 및 검토 기준 문서화.
-
-* 기여: 식약처 정책 연구 보고서 작성 참여를 통해 규제 문서 검토 및 정책 제안 등 문서화 능력 향상, 제네릭 의약품 개발 과정에 대한 규제적 이해도 확보.
-
-## 3. Other Relevant Experience
-### 1. 의약품 표준제조기준 개선 및 검토 기준 마련에 관한 연구
-* 의약품 표준제조기준 실태 조사 자료 기반의 데이터 정리 및 기초 자료 마련.
-### 2. 혁신 유전자재조합의약품 제품화 규제과학 지원 기획연구
-* 국내외 연구개발 및 규제 동향 조사·분석과 유전자재조합의약품의 종류 및 정의을 통한 정리 기초자료 마련.
-### 3. 제약생명공학 기반 실험 경험
-* **역량:** 팀과의 협업을 위한 제약생명공학 분야 전반의 기초 지식 및 실험 설계 능력. 
-* **내용:** 반응표면분석법(RSM)을 활용한 천연물 추출 조건 최적화 등, Wet Lab 기반 실험 연구 수행 경험.
+**Tech Stack:** `Python` `AlphaFold` `GROMACS` `PyRx` `AutoDock Vina` `PrankWeb` `MM/PBSA` `PyMOL`
 
 ---
 
-# Education
-* **중앙대학교 대학원 (Chung-Ang Univ.)** | 규제약학 석사 (Regulatory Policy)
-* **건양대학교 (Konyang Univ.)** | 제약생명공학 학사
+### 2. [흉부 X-ray 기반 폐렴 분류 모델](./projects/xray-pneumonia-classification) *(개인 프로젝트)*
+전이학습 기반 CNN(MobileNetV2)으로 흉부 X-ray를 정상/폐렴 이진 분류하는 모델을 처음부터 직접 설계·학습했습니다. 최종 테스트셋 기준 **82.69%** 분류 정확도를 달성했습니다.
+
+**Tech Stack:** `Python` `PyTorch` `MobileNetV2` `Data Augmentation`
+
+➜ [코드 및 상세 내용 보기](./projects/xray-pneumonia-classification)
+
+---
+
+### 3. [세종특별자치시 상권 현황 분석](./projects/sejong-commercial-analysis) *(개인 프로젝트, LH COMPAS 공모과제 레퍼런스)*
+공공데이터(R-ONE, KOSIS, 건축HUB)를 활용해 세종시 상가 유형별 공급밀도와 공실률의 구조적 불균형을 분석하고 정책 시나리오를 도출했습니다.
+
+**Tech Stack:** `Python` `Pandas` `선형회귀` `데이터 시각화`
+
+➜ [코드 및 상세 내용 보기](./projects/sejong-commercial-analysis)
+
+---
+
+### 4. Regulatory Science Projects
+컴퓨팅 중심 프로젝트 외에, 대학원 규제약학 연구 과정에서 수행한 정책·문서화 작업입니다. 이종 분야(AI 개발자·실험 연구원·정책 담당자) 간 기준을 조율하고 문서로 정리하는 역량을 보여줍니다.
+
+- **의약품동등성시험 대조약 선정관리 체계 개선방안 연구** — 국내외 규제기관(FDA, EMA, PMDA) 비교 분석 및 대조약 선정 가이드라인(안) 도출
+- **의약품 표준제조기준 개선 및 검토 기준 마련 연구** — 해외 표준제조제도 비교 분석 기초 자료 작성
+- **혁신 유전자재조합의약품 제품화 규제과학 지원 기획연구** — 국내외 규제 동향 조사·정리
+
+---
+
+### 5. Wet-Lab 실험 경험 (학부)
+반응표면분석법(RSM)을 활용한 천연물 추출 조건 최적화 연구를 수행했습니다 (R² = 0.9760). 컴퓨팅 중심 연구로 전환하기 이전의 실험 설계·수행 기초를 보여줍니다.
+
+---
+
+## Education
+- **중앙대학교 대학원** | 규제약학과 (2023.03–2025.08)
+- **건양대학교** | 제약생명공학과 (2019.03–2023.02)
 
 ## 📫 Contact
-
-* **Email:** dysk98@naver.com
-* **Phone:** 010-9324-0366
+- **Email:** dysk98@naver.com
+- **Phone:** 010-9324-0366
