@@ -29,7 +29,6 @@
 - MM/PBSA로 결합 자유에너지를 정량화해 DROPERIDOL, ESTRONE 등 고결합 친화도 후보물질 도출
 - 예측 구조 일부 잔기가 시뮬레이션 환경에서 불안정하게 거동하는 문제를 발견해, 연산 조건을 단계적으로 재보정하며 재현성 확보
 
-> 코드는 학내 계산 클러스터(Linux) 환경에서 실행되어 이 레포에는 포함되어 있지 않습니다. 핵심 스크립트 정리 후 별도 폴더로 추가할 예정입니다.
 
 **Tech Stack:** `Python` `AlphaFold` `GROMACS` `PyRx` `AutoDock Vina` `PrankWeb` `MM/PBSA` `PyMOL`
 
