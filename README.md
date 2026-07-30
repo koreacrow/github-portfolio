@@ -35,12 +35,22 @@
 ---
 
 ### 2. [흉부 X-ray 기반 폐렴 분류 모델](./projects/xray-pneumonia-classification) *(개인 프로젝트)*
-전이학습 기반 CNN(MobileNetV2)으로 흉부 X-ray를 정상/폐렴 이진 분류하는 모델을 처음부터 직접 설계·학습했습니다. 최종 테스트셋 기준 **82.69%** 분류 정확도를 달성했습니다.
+전이학습 기반 CNN을 활용한 흉부 X-ray 영상 이진 분류(정상/폐렴) 모델입니다.
+ 
+## Overview
+- **Dataset:** Kaggle Chest X-Ray Pneumonia (Train/Val/Test 분할, 128x128 리사이즈)
+- **Base Model:** MobileNetV2 (ImageNet 가중치 고정)
+- **Head:** GlobalAveragePooling → Dropout(0.3) → Dense(1, sigmoid)
+- **Augmentation:** RandomFlip(horizontal), RandomRotation(0.05)
+- **Training:** Adam(lr=1e-4), Batch Size 16, EarlyStopping(patience=2)
+- **Result:** 테스트셋 기준 **82.69%** 분류 정확도
+## Files
+- [`notebook.ipynb`](./notebook.ipynb) — 데이터 로드부터 전처리, 증강, 모델 학습, 평가까지 전체 파이프라인
+## Key Learnings
+- 계산화학 중심이었던 기존 연구 경험에서 벗어나 이미지 기반 딥러닝을 처음부터 직접 설계·학습
+- 낯선 프레임워크(PyTorch/전이학습)를 독학으로 익혀 프로젝트를 처음부터 끝까지 완결
 
 **Tech Stack:** `Python` `PyTorch` `MobileNetV2` `Data Augmentation`
-
-➜ [코드 및 상세 내용 보기](./projects/xray-pneumonia-classification)
-
 ---
 
 ### 3. [세종특별자치시 상권 현황 분석](./projects/sejong-commercial-analysis) *(개인 프로젝트, LH COMPAS 공모과제 레퍼런스)*
