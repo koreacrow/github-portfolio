@@ -34,7 +34,7 @@
 
 ---
 
-### 2. [흉부 X-ray 기반 폐렴 분류 모델](./projects/xray-pneumonia-classification) *(개인 프로젝트)*
+### 2. [흉부 X-ray 기반 폐렴 분류 모델] *(개인 프로젝트)*
 전이학습 기반 CNN을 활용한 흉부 X-ray 영상 이진 분류(정상/폐렴) 모델입니다.
  
 ## Overview
