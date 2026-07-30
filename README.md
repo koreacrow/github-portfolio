@@ -54,12 +54,12 @@
 
 ---
 
-### 3. [세종특별자치시 상권 현황 분석](./projects/sejong-commercial-analysis) *(개인 프로젝트, LH COMPAS 공모과제 레퍼런스)*
+### 3. [세종특별자치시 상권 현황 분석] *(개인 프로젝트, LH COMPAS 공모과제 레퍼런스)*
 공공데이터(R-ONE, KOSIS, 건축HUB)를 활용해 세종시 상가 유형별 공급밀도와 공실률의 구조적 불균형을 분석하고 정책 시나리오를 도출했습니다.
 
 **Tech Stack:** `Python` `Pandas` `선형회귀` `데이터 시각화`
 
-➜ [코드 및 상세 내용 보기](./projects/sejong-commercial-analysis)
+➜ [상세 내용 보기](da.md)
 
 ---
 
