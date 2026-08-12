@@ -50,7 +50,7 @@
 - 계산화학 중심이었던 기존 연구 경험에서 벗어나 이미지 기반 딥러닝을 처음부터 직접 설계·학습
 - 낯선 프레임워크(PyTorch/전이학습)를 독학으로 익혀 프로젝트를 처음부터 끝까지 완결
 
-**Tech Stack:** `Python` `PyTorch` `MobileNetV2` `Data Augmentation`
+**Tech Stack:** `Python` `TensorFlow` `Keras` `MobileNetV2` `Data Augmentation
 
 ---
 
